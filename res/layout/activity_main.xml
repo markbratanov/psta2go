@@ -1,0 +1,110 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/LightBlue"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingRight="@dimen/none"
+    android:paddingTop="@dimen/none"
+    tools:context=".MainActivity" >
+
+    <include
+        android:id="@+id/include"
+        layout="@layout/actionbar" />
+
+    <Spinner
+        android:id="@+id/spinner1"
+        style="@color/Black"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/TextView01"
+        android:layout_below="@+id/TextView01"
+        android:layout_marginRight="18dp"
+        android:layout_marginTop="18dp" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout1"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/h1_enterstop"
+        android:layout_marginTop="20dp"
+        android:background="@color/white"
+        android:dividerPadding="@dimen/size_10dp"
+        android:gravity="left"
+        android:paddingBottom="@dimen/size_10dp"
+        android:paddingLeft="@dimen/size_18dp"
+        android:paddingTop="@dimen/size_10dp"
+        android:showDividers="middle" >
+
+        <Space
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent" />
+
+        <EditText
+            android:id="@+id/editText1"
+            android:layout_width="82dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="14dp"
+            android:background="@color/white"
+            android:ems="10"
+            android:hint="@string/stop_num"
+            android:inputType="number"
+            android:textSize="@dimen/size_header" >
+
+            <requestFocus />
+        </EditText>
+
+        <Space
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent" />
+
+        <Button
+            android:id="@+id/button1"
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:text="@string/go_button"
+            android:textColor="@color/gray" />
+
+        <Button
+            android:id="@+id/button2"
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:background="@color/white"
+            android:drawableLeft="@drawable/rating_important"
+            android:gravity="left|center_vertical"
+            android:text="@string/save_button"
+            android:textColor="@color/gray" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/TextView01"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/linearLayout1"
+        android:layout_below="@+id/linearLayout1"
+        android:layout_marginTop="42dp"
+        android:text="@string/choose_route"
+        android:textSize="@dimen/size_header_big" />
+
+    <TextView
+        android:id="@+id/h1_enterstop"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/include"
+        android:layout_marginLeft="14dp"
+        android:layout_marginTop="28dp"
+        android:shadowColor="@color/DarkGray"
+        android:shadowDx="3"
+        android:shadowDy="2"
+        android:text="@string/enter_stop_num"
+        android:textColor="@color/AliceBlue"
+        android:textSize="@dimen/size_header_big" />
+
+</RelativeLayout>

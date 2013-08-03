@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">PSTA 2 GO</string>
+    <string name="action_settings">Settings</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="Welcome">Enter stop #</string>
+    <string name="choose_route">Or choose route</string>
+    <string name="go">Go</string>
+    <string name="image_logo">image logo</string>
+    <string name="stop_num">Stop #</string>
+    <string name="enter_stop_num">Enter stop number</string>
+    <string name="save_button">SAVE</string>
+    <string name="go_button">GO</string>
+
+</resources>
