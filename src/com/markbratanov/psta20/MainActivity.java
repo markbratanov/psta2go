@@ -90,7 +90,6 @@ public class MainActivity extends Activity {
 				busLinesName.add(link.text());
 			}
 
-
 			return "Done";
 
 		}
