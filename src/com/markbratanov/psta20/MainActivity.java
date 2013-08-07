@@ -12,11 +12,13 @@ import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.os.AsyncTask;
 import android.os.Bundle;
+import android.app.ActionBar;
 import android.app.Activity;
 import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.SharedPreferences;
 import android.graphics.Typeface;
+import android.util.Log;
 import android.view.Menu;
 import android.view.View;
 import android.widget.AdapterView;
@@ -35,6 +37,15 @@ public class MainActivity extends Activity {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
+		
+		
+		ActionBar mActionBar = getActionBar();
+		mActionBar.setDisplayShowTitleEnabled(false); // if you dont want title.
+		mActionBar.setDisplayUseLogoEnabled(false);
+		mActionBar.setDisplayShowHomeEnabled(false);
+		mActionBar.setDisplayOptions(ActionBar.DISPLAY_SHOW_CUSTOM,
+		  ActionBar.DISPLAY_SHOW_CUSTOM);
+		mActionBar.setCustomView(R.layout.actionbar);
 
 		Typeface typeface = Typeface.createFromAsset(getAssets(),
 				"fonts/Roboto-LightItalic.ttf");
@@ -88,6 +99,7 @@ public class MainActivity extends Activity {
 			for (Element link : links) {
 				busLinesHref.add(link.attr("href"));
 				busLinesName.add(link.text());
+				Log.i("MainActivity", "getting BusLines Name:  " + link.text());
 			}
 
 			return "Done";
@@ -110,13 +122,13 @@ public class MainActivity extends Activity {
 		
 	public void setSpinner() {
 		if (busLinesName.size() > 0) {
-			Spinner spinnerCategory = (Spinner) findViewById(R.id.spinner1);
+			Spinner spinnerCategory = (Spinner) findViewById(R.id.select_line);
 			ArrayAdapter<String> categoriesAdapter = new ArrayAdapter<String>(
 					getApplicationContext(),
-					android.R.layout.simple_spinner_item, busLinesName);
+					android.R.layout.select_dialog_item, busLinesName);
 			spinnerCategory.setAdapter(categoriesAdapter);
 		} else {
-			Spinner spinnerCategory = (Spinner) findViewById(R.id.spinner1);
+			Spinner spinnerCategory = (Spinner) findViewById(R.id.select_line);
 			spinnerCategory.setVisibility(View.GONE);
 		}
 	}

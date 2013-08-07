@@ -12,5 +12,9 @@
     <string name="enter_stop_num">Enter stop number</string>
     <string name="save_button">SAVE</string>
     <string name="go_button">GO</string>
+    <string name="find_button">FIND</string>
+    <string name="title_1_hint">You can find the stop number on the bus sign</string>
+    <string name="title_2_hint">Bus lines are numbered at the bus stop and on the front of most buses.</string>
+    <string name="title_3">Saved stops</string>
 
 </resources>
